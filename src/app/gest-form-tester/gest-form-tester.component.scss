@@ -1,0 +1,30 @@
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.integerFormField {
+  margin-left: 20px;
+  width: 140px;
+}
+
+.submitButton {
+  margin-top: 20px;
+}
+
+.gridContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.child {
+  width: 80px;
+  height: 65px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

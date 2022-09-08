@@ -1,0 +1,17 @@
+<form class="flex-col" [formGroup]="form" (ngSubmit)="generateList()">
+  <div>
+    <label>Nombre d'éléments de la liste : </label>
+    <mat-form-field class="integerFormField" appearance="fill">
+      <input type="number" matInput required formControlName="numberOfElement">
+      <mat-error *ngIf="form.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+  </div>
+  <button class="submitButton" type="submit" [disabled]="!form.valid" mat-raised-button color="primary">
+    <mat-icon>settings</mat-icon> Générer</button>
+</form>
+
+<div class="gridContent">
+  <div class="child" *ngFor="let testedNumber of listOfTestedNumbers">
+    <p>{{ testedNumber }}</p>
+  </div>
+</div>
